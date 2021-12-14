@@ -82,6 +82,7 @@ React overview
             - class vs className
             - <style color="blue"> vs <style={{ color:"blue"}}>
             - <!--comment--> vs {*/Comment/*}
+            - self-closing tags end in a slash <img />
         -> converting html to JSX 
             - find/replace
             - online complier
