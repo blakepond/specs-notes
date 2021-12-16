@@ -126,4 +126,61 @@ Java Script Syntax and Operators
         - function arguments
         - shallow copy on object litterals
 
+    - functions
+        - argument - value passed into the function when invoked
+        - parameter - variable we list as part of function declaration
+        -immediately invoked function expression (IIFE)
+        - closures
+            - storing values in variables when function is closed
+        - arrow functions
+            - behavior of this
+                - this - refers to the owner of the function we are executing
+                    - console logging this refers to the entire object
+        
+        - call method
+            - accepts list of argument and calls objects
+            - use with individual arguments or varying type
+        - apply method
+            - accepts an array calls single array of objects
+            - use with arrays with similar elements
+        - bind method
+            - 
+        - built in functions
+            - eval
+                - evaluates the variables
+                - will concatanate if a string is present in the variables
+            - parseInt
+            - parseFloat
+            - escape
+        - spread and rest parameters
+            - default parameters
+                - should appear after any additional parameters
+            - rest parameters
+                - ...variable as parameter
+                - lets you use multiple parameters 
+            - spread operator
+                - same syntax as rest but rather than being a parameter its in an argument of the fucntion being invoked
+                
+    - promises and async 
+        - promise
+            - object that represents the eventual completion or failure of an async operation and its resulting value
+            - states
+                - pending - when promise is first created
+                - fulfilled - async call is completed successfully
+                - rejected - async call has failed, similar to catch function
+                - settled or resolved
+            - creating own promise
+                - let promise = new Promise((resolve, reject) => {})
+            - queue promises
+                - all - will wait till all promises are fulfilled
+                - allSettled - will wait till all promises are fulfilled or settled
+                - race - fasted promised settled
+        - async/await
+            - async
+                - keyword used to designate if a function is async
+            - await
+                - pauses the async function and waits till the promise is fulfilled
+                - must be used inside async 
+                - only blocks current function
+        
 */
