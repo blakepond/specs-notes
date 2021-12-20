@@ -132,6 +132,20 @@ React overview
                 - styling
                     - 50 different styling 
                     - css in js
+    - react snippits
+        - _rfce -> create component
+        - npx create-next-app -e with-tailwindcss [project name]
+        - npm add emoji-mart
+        - npm add firebase
+        - npm add react-moment
+        - npm add recoil
+        - npm add moment
+
+    - questions
+        - useEffect
+        - what is options chaining
+        - </> closing tags <tag/> vs </tag>
+    
         
 
             
