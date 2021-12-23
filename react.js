@@ -81,7 +81,7 @@ React overview
             - for vs htmlFor
             - class vs className
             - <style color="blue"> vs <style={{ color:"blue"}}>
-            - <!--comment--> vs {*/Comment/*}
+            - <!--comment--> vs {*/ Comment; /*}
             - self-closing tags end in a slash <img />
         -> converting html to JSX 
             - find/replace
@@ -132,7 +132,7 @@ React overview
                 - styling
                     - 50 different styling 
                     - css in js
-    - react snippits
+    //* react snippits
         - _rfce -> create component
         - npx create-next-app -e with-tailwindcss [project name]
         - npm add emoji-mart
@@ -140,11 +140,201 @@ React overview
         - npm add react-moment
         - npm add recoil
         - npm add moment
+        - npm install @headlessui/react - tailwind modal
+        - npm install react-placeholder
 
-    - questions
+
+
+    - Class Component syntax
+        - class Welcome extends React.Component {
+                render (){
+                    return(
+                        <h1>
+                        Hello, {this.props.name}
+                        </h1>
+                    )
+                }
+          } 
+    - Functional Component syntax 
+          function Welcome(props){
+              return (
+                  <h1>Hello, {props.name}
+                  </h1>
+              )
+          }
+
+        - state vs props
+            - props are received into functional components as the properties of a single argument
+                - props cannot change value 
+                - props go down
+            - state can only be decalred inside react components
+                - can change the state 
+                - create event listener
+                - update state inside event listener
+                - state goes up
+        //* react hooks
+            - useState [showState, setShowState] = useState(true)
+            - useEffect [showState, setShowState] = useEffect()
+                - configureable lifecycle method
+                - takes 2 args
+                    -function
+                    -
+        - four ways to handle API calls
+            - inline (Call fetch/Axios/etc)
+            - centralized functions 
+                - create functions and import them rather than inlining
+            - custom hook
+                - simplize state management and eliminate redundant code
+            - 3rd party library
+
+        - handling remote state
+            - promises
+                - '.then'
+                - '.catch'
+                - '.finally'
+            - async/await
+                - try
+                - catch
+                - finally
+            - custom hook
+                - create new function and export it to reuse state across many pages
+
+        - error boundaries
+          -handling error state
+        - loading calls
+          - loading state to signify something is happening 
+
+        - react synthetic event system
+            - event handlers
+                -onClick
+                -onChange
+                -onHover
+                -onBlur
+                -onSubmit
+                -onMouseover
+        - react render
+            - react renders when a 
+                - state changes
+                - prop changes
+                - parent renders
+                - context changes
+        - logical && operator
+            - runs right side if left side is truthy
+
+        - state best practices
+          - declare state in component that needs it 
+          - if child components need state pass it down via props
+          - if non child components need state lift state to common parent
+          - alternative for passing props, global state management librarys
+            - context
+            - redux
+            - mobX
+            - recoil
+        
+        - shared, derived and immutable state
+          - derived state
+            - state that is disabled till an event has occured
+          - array.find 
+                - accepts a predicate
+                     - predicate
+                        - function that returns true or false
+        - immutibility  
+            - number
+            -string
+            - boolean
+            - undefined
+            - null
+          - react state is immutible (unchanging)
+          - fast comparisons
+          - pure functions are easy to understand
+          - simpler undo and redo
+          - aviod bugs
+
+         - value equality
+            - does each property have the same value?
+          -reference equailty
+            - do both variables reference the same spot in memory
+        - mutable
+          - objects
+            - creating copys of objects in js
+                - Object.assign({}, state, {property: "value"})
+                - Spread 
+                    -const newState = {...state, property: "value"}
+          - arrays
+            - creating copys of arrays
+                - Spread
+                    - const newusers = [...state.users]
+            - avoid push, pop and reverse array methods, the array must be cloned first before using these methods
+            - use map, filter, reduce, concat and spread methods because they return a new array
+          - functions
+
+          - web storage
+            - cookies
+            - sessionStorage
+            - localStorage
+            - indexedDb
+            - cacheStorage
+
+            - benefits of web storage
+                - local
+                - simple 
+                - fast
+                - works offline
+            - downsides
+                - limited storage
+                - security risk
+                - localStorage / session storage block i / 0
+                - tied to single browser
+            - state Enums vs Finite State Machines
+                - fsm 
+                    - only one state can be active at the same time.
+                    - the machine transitions from one state to another
+                - state enums
+                    - 
+        - form validation
+          
+        - managing state via refs
+          - ref
+            - reference to HTML element
+            - store a value thats stable between renders
+            - can mutate the ref's value directly
+            - dont cause a re-render when they change 
+
+
+    //* react router
+          - fast, declarative client-side routing
+          - handle 404s
+          - nest the app in router tag for router to be enabled globally
+          - link 
+            - like an anchor tag but react router handles the click so the page doesn't reload
+          - useParams hook
+            - allows to read URL params
+          - useNavigate hook
+            - redirect to a link
+ 
+    - Next.js Framework
+         - server-side rendering and static site generation, built using webpack
+         - file-based routing built in 
+          - any js file put in directory will be executed 
+
+//? questions
         - useEffect
         - what is options chaining
         - </> closing tags <tag/> vs </tag>
+        - when to use "key"
+            - use key when iterating over a list
+        - react fragment <> </>
+        - lambda syntax
+        - && 
+        - ??
+        - race conditions
+        - time travel
+        - persistance 
+        - providers
+        - pure functions
+        - enum pattern
+    
+    
     
         
 
