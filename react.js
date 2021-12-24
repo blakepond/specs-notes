@@ -1,6 +1,6 @@
 /*
-React overview
 
+        //* react beginner
     -why react
         -react is a library not a framework
             - usecases
@@ -132,7 +132,10 @@ React overview
                 - styling
                     - 50 different styling 
                     - css in js
-    //* react snippits
+
+
+
+            //* react packages
         - _rfce -> create component
         - npx create-next-app -e with-tailwindcss [project name]
         - npm add emoji-mart
@@ -145,6 +148,8 @@ React overview
 
 
 
+
+        //* Handingling React State
     - Class Component syntax
         - class Welcome extends React.Component {
                 render (){
@@ -240,7 +245,7 @@ React overview
                         - function that returns true or false
         - immutibility  
             - number
-            -string
+            - string
             - boolean
             - undefined
             - null
@@ -254,6 +259,7 @@ React overview
             - does each property have the same value?
           -reference equailty
             - do both variables reference the same spot in memory
+
         - mutable
           - objects
             - creating copys of objects in js
@@ -266,7 +272,6 @@ React overview
                     - const newusers = [...state.users]
             - avoid push, pop and reverse array methods, the array must be cloned first before using these methods
             - use map, filter, reduce, concat and spread methods because they return a new array
-          - functions
 
           - web storage
             - cookies
@@ -285,6 +290,7 @@ React overview
                 - security risk
                 - localStorage / session storage block i / 0
                 - tied to single browser
+
             - state Enums vs Finite State Machines
                 - fsm 
                     - only one state can be active at the same time.
@@ -299,6 +305,107 @@ React overview
             - store a value thats stable between renders
             - can mutate the ref's value directly
             - dont cause a re-render when they change 
+            - instance variables
+                - keep data between renders
+                - storing a previous value
+                - track if component is mounted
+                - hold HTTP request cancel token
+                - reference a 3rd party library instance
+                - debounce a call / declare local cache
+                - store flag that something happened
+                - store value used in useEffect
+
+        - useReducer vs useState
+          - useState
+            - easy to implement
+            - easy to learn
+          - useReducer
+            - more scalable for complex scenarios
+                - many complex state transitions
+                - multiple sub-values
+                - next stae depends on previous one
+                - reason about state in isolation
+                - testable on isolation
+                - reusable
+
+        - context
+          - sharing state globally, displaying date across multiple components
+         - complex data flows
+         - inter-component communication
+
+    - 3rd party state react libraries
+          -> local state
+            - built into react:
+                - useState
+                - Class state
+                - useReducer
+                - refs
+                - derived state in render
+            - 3rd party: 
+                - x state
+          -> global state
+            - built into react:
+                - lift state
+                - context
+            - 3rd party
+                - redux
+                - recoil
+                - mobX
+          -> server state
+            - common libraries
+                - fetch
+                - axios
+            - 3rd party
+                - react-query
+                - swr
+                - Relay
+                - Apollo
+          -> immutable state
+            - built into react:
+                - plain js
+            - 3rd party
+                - immer
+          -> form state
+            - built into react:
+                - state
+                -event handlers
+                - derived state
+            - 3rd party
+                - formik
+                - react hook form
+
+    - 8 ways to handle state and when to use
+          - URL - sharable app location (router)
+          - Web Storage - persist between session, one browser    
+          - Local state - only one component needs the state
+          - lifted state - a few related components need the state
+          - derived state - state can be derived from existing state
+          - refs - reference DOM elements, state that isn't rendered
+          - context - global or subtree state
+          - third party libraries - global state, server state, form state etc. 
+          
+        //? questions to consider when handling state
+          - does it belong in the URL? 
+             - current page, current record, sorting, scroll location
+          - want to persist data across sessions or make data available offline?
+            -  localStorage, indexedDB, etc
+          - is it server date? 
+            - try react-query or swr. 
+          - using GraphQL? 
+            - consider relay or Apollo
+          - is it a DOM element reference, state that doesn't change or not rendered at all? 
+            - use a ref
+          - can it be derived from existing props, state, URL, etc?
+            - derive it "on-the-fly" as part of each render (memoize if expensive)
+          - does only one compenent use the data? 
+            - use local state
+          - do a few related components use it?
+            - store state in a common parent
+          - is it global state? 
+            - store in apps root component, context, or separate library like recoil or redux
+
+
+
 
 
     //* react router
@@ -322,17 +429,26 @@ React overview
         - what is options chaining
         - </> closing tags <tag/> vs </tag>
         - when to use "key"
-            - use key when iterating over a list
+            - use key when iterating over a list in .map method
         - react fragment <> </>
+          - app rendering can only have one component rendered at a time. wrap additional components in fragment
         - lambda syntax
         - && 
+          - if right side of && is true execute the code to the left
         - ??
         - race conditions
         - time travel
         - persistance 
         - providers
-        - pure functions
+        - pure functions - 
+            - depends only on arguments, doesn't rely on anything outside the function
+            - doesnt mutate arguments
+            - has no side-effects
+            - returns new value
+            - idempotent
+                - return same output for given input
         - enum pattern
+        - side-effects
     
     
     
