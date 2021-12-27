@@ -449,6 +449,8 @@
                 - return same output for given input
         - enum pattern
         - side-effects
+
+
     
     
     
