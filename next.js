@@ -21,6 +21,7 @@
 
     * tailwind notes
         - contents - create a phantom container whose children act like direct children of the parent
+        - overflow
 
 
     * graphql notes
@@ -65,6 +66,9 @@
 
         - return results
             - return result.postsConnection.edges;
+        
+        - mutation
+            - data that changes in graphQL
 
     * graphcms notes
             - create schemea
@@ -75,8 +79,14 @@
             - allow access 
                 - API access
                     - click "yes initialize defaults"
+            - slug? 
     * next.js
         - file routing
+        - getStaticPaths 
+            - when passing a dynamic url
+        - getStaticProps
+        - return fallback
+        - Image
 
 
 
@@ -92,7 +102,10 @@
                         props: { posts }
                         }
                     }
+                - fetch data at build time, serverside render
             - graphql
-                    - querying
+                    - how to query
+            - graphcms
+                    - slug? 
 
 */
