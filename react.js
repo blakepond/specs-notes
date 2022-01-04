@@ -172,6 +172,8 @@
             - props are received into functional components as the properties of a single argument
                 - props cannot change value 
                 - props go down
+            - prop types
+                - 
             - state can only be decalred inside react components
                 - can change the state 
                 - create event listener
